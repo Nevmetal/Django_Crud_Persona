@@ -1,0 +1,70 @@
+{% extends 'layout/layout.html' %}
+{% load static%}
+{% block content %}
+<section class="container">
+  <h1 style="font-size: 2.5rem;">
+    {% if form.instance.CI %}Editar Persona{% else %}Registro de Persona{% endif %}
+  </h1>
+  <form method="post">
+    {% csrf_token %}
+
+
+    <div style="display: grid; grid-template-columns:repeat(2, minmax(150px, 1fr));">
+      <div>
+        <label for="id_CI">Cédula</label>
+        {{ form.CI }}
+        <div class="error" id="error-ci">
+          {% if form.CI.errors %}
+          {{ form.CI.errors }}
+          {% endif %}
+        </div>
+      </div>
+      <div>
+        <label for="id_email">Email</label>
+        {{ form.email }}
+        <div class="error" id="error-email">
+          {% if form.email.errors %}
+          {{ form.email.errors }}
+          {% endif %}
+        </div>
+      </div>
+      <div>
+        <label for="id_nombre">Nombre</label>
+        {{ form.nombre }}
+        <div class="error" id="error-nombre">
+          {% if form.nombre.errors %}
+          {{ form.nombre.errors }}
+          {% endif %}
+        </div>
+      </div>
+      <div>
+        <label for="id_apellido">Apellido</label>
+        {{ form.apellido }}
+        <div class="error" id="error-apellido">
+          {% if form.apellido.errors %}
+          {{ form.apellido.errors }}
+          {% endif %}
+        </div>
+      </div>
+      <div>
+        <label for="id_fecha_nacimiento">Fecha de Nacimiento</label>
+        {{ form.fecha_nacimiento }}
+        <div class="error" id="error-fecha-nacimiento">
+          {% if form.fecha_nacimiento.errors %}
+          {{ form.fecha_nacimiento.errors }}
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    <div style="margin: 20px; display: grid; grid-template-columns:repeat(2, minmax(150px, 1fr));">
+      <button class="btn_link" type="submit">Guardar</button>
+      <a href="{% url 'listar_personas' %}" class="btn_link">Cancelar</a>
+    </div>
+
+
+  </form>
+
+
+</section>
+
+{% endblock %}

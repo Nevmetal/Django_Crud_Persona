@@ -1,0 +1,41 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django</title>
+    <link rel="stylesheet" href="{% static 'styles/main.css' %}">
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul>
+            <li class="left-item">
+                <a href="{% url 'listar_personas' %}">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32"
+                        xml:space="preserve">
+                        <path fill="none" stroke="#fff" stroke-width="2" stroke-miterlimit="10" d="M3 17 16 4l13 13" />
+                        <path fill="none" stroke="#fff" stroke-width="2" stroke-miterlimit="10"
+                            d="M6 14v13h7V17h6v10h7V14" />
+                    </svg>
+                </a>
+
+            </li>
+            <li class="right-item">
+                <a href="{% url 'listar_personas' %}">Inicio</a>
+            </li>
+            <li class="right-item">
+                <a href="{% url 'crear_persona' %}">Registrar</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+    {% block content %}
+    {% endblock %}
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(243 244 246);
+}
+.navbar {
+  background: #404040;
+  padding: 5px 0;
+  width: 100%;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 0;
+  margin: 0;
+}
+
+.right-item {
+  margin-right: 2rem;
+}
+
+.navbar ul li {
+  list-style: none;
+}
+
+.left-item {
+  margin-right: auto; 
+  margin-left: 2rem;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar ul li a:hover {
+  color: aquamarine;
+}
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+form {
+  padding: 20px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.input {
+  background: wheat;
+  padding: 10px;
+  text-align: center;
+  display: block;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th,
+td {
+  border: 1px solid #ddd;
+  text-align: left;
+  padding: 8px;
+}
+tr:nth-child(even) {
+  background-color: rgb(229 231 235);
+}
+.error {
+  color: red;
+  font-size: 0.9em;
+  margin-top: 5px;
+}
+.eliminar {
+  font-size: 2rem;
+  color: red;
+}
+.btn_link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #3e638a;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  margin: 2px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: "Times New Roman", Times, serif, sans-serif;
+}
+
+.btn_link:hover {
+  background-color: #0056b3;
+}
+.btn_Eliminar {
+  font-family: "Times New Roman", Times, serif, sans-serif;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #752222;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  margin: 2px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.btn_Eliminar:hover {
+  background-color: #d80d0d;
+}
+.btn_Add {
+  background-color: rgb(34 197 94);
+}
+.btn_Add:hover {
+  background-color: rgb(22 163 74);
+}
