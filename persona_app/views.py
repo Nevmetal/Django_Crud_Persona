@@ -35,8 +35,8 @@ def crear_persona(request):
     return render(request, 'crear_persona.html', {'form': form})
 
 #Vista de Actualizar Persona
-def actualizar_persona(request, CI):
-    persona = get_object_or_404(Persona, CI=CI)
+def actualizar_persona(request, id):
+    persona = get_object_or_404(Persona, id=id)
     if request.method == 'POST':
         form = PersonaForm(request.POST, instance=persona)
         if form.is_valid():
@@ -47,8 +47,8 @@ def actualizar_persona(request, CI):
     return render(request, 'crear_persona.html', {'form': form})
 
 #Vista de Eliminar Persona
-def eliminar_persona(request, CI):
-    persona = get_object_or_404(Persona, CI=CI)
+def eliminar_persona(request, id):
+    persona = get_object_or_404(Persona, id=id)
     if request.method == 'POST':
         persona.delete()
         return redirect('listar_personas')

@@ -3,7 +3,7 @@
 {% block content %}
 <section class="container">
   <h1 style="font-size: 2.5rem;">
-    {% if form.instance.CI %}Editar Persona{% else %}Registro de Persona{% endif %}
+    {% if form.instance.id %}Editar Persona{% else %}Registro de Persona{% endif %}
   </h1>
   <form method="post">
     {% csrf_token %}

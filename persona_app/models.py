@@ -2,7 +2,8 @@ from django.db import models
 
 # Create your models here.
 class Persona(models.Model):
-    CI = models.CharField(max_length=10, primary_key=True)
+    id = models.AutoField(primary_key=True)  
+    CI = models.CharField(max_length=10, unique=True)  
     nombre = models.CharField(max_length=100)
     apellido = models.CharField(max_length=100)
     email = models.EmailField()
