@@ -18,7 +18,7 @@ Pasos:
    En la **terminal** de vscode escribir:
   - pip install virtualenv (para instalar el entorno virtual)
   - virtualenv venv (para crear la carpeta del entorno virtual)
-  - .\venv\Scripts\actívate (para activar el entorno virtual)
+  - .\venv\Scripts\activate (para activar el entorno virtual)
 3. Instalar Django y la dependencias para utilizar PostgreSQL 
   - pip install django psycopg2-binary
 4. Configurar la conexión de la BD para ello ir a la carpeta "mysite_person" el archivo "settings.py" buscar "DATABASE" (linea 77)
